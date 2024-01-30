@@ -1,10 +1,17 @@
 # Assignment Readme Guidelines
 
+
 ## Overview
 
-- Your name
-- which assignment are included
-- which one are completed and which one are not
+- Tobias Horne Christiansen
+[x] Transfer js to ts
+[ ] Typescript basics exercise
 
-## Friday presentation
-- add the friday presentation into the weekly folder
+
+To run transfer js to ts:
+
+```bash
+npm install
+
+npm run dev
+```
