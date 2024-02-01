@@ -3,13 +3,13 @@
 
 ## Overview
 
-- Tobias Horne Christiansen
+#### Tobias Horne Christiansen
 
-[x] Transfer js to ts
+- [x] Transfer js to ts
 
-[x] Typescript basics exercise
+- [x] Typescript basics exercise
 
-[x] Type declaration exercise
+- [x] Type declaration exercise
 
 
 To run transfer js to ts:
