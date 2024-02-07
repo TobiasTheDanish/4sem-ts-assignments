@@ -2,6 +2,7 @@ import express, { Request, Response , Application, NextFunction } from 'express'
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
+import * as path from 'node:path'
 
 //For env File 
 dotenv.config();
@@ -9,11 +10,13 @@ dotenv.config();
 const app: Application = express();
 const port = process.env.PORT || 7007;
 
+app.use(express.static('public'))
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: true}))
 app.use(morgan('dev'))
 
 app.get('/', (_req: Request, res: Response) => {
-	res.send('Welcome to Express & TypeScript Server');
+	res.sendFile(path.join(__dirname , "..", "/public/index.html"))
 });
 
 app.get('/persons', async (_req: Request, res: Response) => {
@@ -42,6 +45,17 @@ app.get('/persons/:id', async (req: Request, res: Response) => {
 	} else {
 		res.status(404).json({msg: 'Person not found'});
 	}
+});
+
+app.post('/users', async (req: Request, res: Response) => {
+	const {firstName, lastName} = req.body
+
+	console.log(firstName, lastName)
+
+	res.status(200).json({
+		msg: "ok",
+		data: {firstName, lastName}
+	});
 });
 
 app.post('/persons', async (req: Request, res: Response) => {
