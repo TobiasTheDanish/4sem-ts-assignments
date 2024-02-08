@@ -98,7 +98,7 @@ app.put('/persons/:id', async (req: Request, res: Response, next: NextFunction) 
 
 		const response = await fetch(`http://localhost:3000/persons/${id}`, {
 			method: "PUT",
-			body: req.body
+			body: JSON.stringify(req.body)
 		});
 
 		if (!response.ok) {
