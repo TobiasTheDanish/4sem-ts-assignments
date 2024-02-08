@@ -2,9 +2,9 @@
 
 ## Overview
 
-- Your name
-- which assignment are included
-- which one are completed and which one are not
+- Tobias Horne Christiansen
 
-## Friday presentation
-- add the friday presentation into the weekly folder
+-[x] express-basics
+-[x] express-routes
+-[x] express-handling-forms
+-[x] express-error-handling
