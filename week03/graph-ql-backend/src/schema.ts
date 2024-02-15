@@ -3,6 +3,7 @@ interface Person {
   name: string,
   age: number,
   phoneNumber: string,
+  imageUrl?: string,
   address?: Address,
 }
 
@@ -61,6 +62,7 @@ let persons: Person[] = [
     name: 'John Doe',
     phoneNumber: '88888888',
     age: 25,
+    imageUrl: "https://st2.depositphotos.com/2931363/6569/i/450/depositphotos_65699901-stock-photo-black-man-keeping-arms-crossed.jpg",
     address: addresses[0],
   },
   {
@@ -68,6 +70,7 @@ let persons: Person[] = [
     name: 'Jane Doe',
     phoneNumber: '88888888',
     age: 30,
+    imageUrl: "https://st2.depositphotos.com/2931363/6569/i/450/depositphotos_65699901-stock-photo-black-man-keeping-arms-crossed.jpg",
     address: addresses[1],
   },
   {
@@ -75,6 +78,7 @@ let persons: Person[] = [
     name: 'John Smith',
     phoneNumber: '88888888',
     age: 35,
+    imageUrl: "https://st2.depositphotos.com/2931363/6569/i/450/depositphotos_65699901-stock-photo-black-man-keeping-arms-crossed.jpg",
     address: addresses[2],
   },
 ]
@@ -85,6 +89,7 @@ type Person {
   name: String!
   age: Int
   phoneNumber: String!
+  imageUrl: String
   address: Address
 }
 type Address {
@@ -100,7 +105,7 @@ type Query {
   getAddressesByZip(zip: String!): [Address]
 }
 type Mutation {
-  addPerson(name: String!, age: Int, phoneNumer: String!, addressId: Int): Person
+  addPerson(name: String!, age: Int, phoneNumber: String!, addressId: Int, imageUrl: String): Person
   addAddress(street: String!, city: String!, zip: String!, personIds: [ID]): Address
   addPersonToAddr(personId: ID!, addressIndex: Int!): [Person]
   removePersonFromAddr(personId: ID!, addressIndex: Int!): [Person]
@@ -133,11 +138,12 @@ export const resolvers = {
   },
   Mutation: {
     addPerson: (_parent: never, args: AddPersonArgs, _context: never, _info:never) => {
-      const newPerson = {
+      const newPerson: Person = {
         id: String(persons.length+1),
         name: args.name,
         age: args.age,
         phoneNumber: args.phoneNumber,
+        imageUrl: args.imageUrl,
         address: addresses[args.addressId],
       };
       addresses[args.addressId].persons.push(newPerson);

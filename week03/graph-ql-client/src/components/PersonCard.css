@@ -1,0 +1,31 @@
+.card {
+  padding: 2em;
+  border: 1px solid;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 2em;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+}
+
+.card-text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.card-title, .card-muted, .card-desc {
+  margin: 0
+}
+
+.card-header-img {
+  height: 150px;
+}
+
+

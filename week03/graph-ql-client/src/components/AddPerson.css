@@ -1,0 +1,12 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: start;
+}
+
+.form>input,
+.form>select {
+  width: 100%;
+  padding: 0;
+}
