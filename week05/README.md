@@ -2,9 +2,11 @@
 
 ## Overview
 
-- Your name
-- which assignment are included
-- which one are completed and which one are not
+- Tobias Horne Christiansen
+- React Task exercise
+Uses the following design patterns
 
-## Friday presentation
-- add the friday presentation into the weekly folder
+- singleton pattern: in form of the [taskManager](./assignment/src/lib/persistence.ts)
+- factory pattern: in from of [taskFactory](./assignment/src/lib/taskFactory.ts)
+- decorator pattern: [updatePersist and persist](./assignment/src/lib/persistence.ts) decorators
+- tries to seperate logic from presentation

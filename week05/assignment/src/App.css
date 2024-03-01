@@ -1,0 +1,19 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  max-height: 98vh;
+}
+
+.card {
+  padding: 2em;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 54px;
+  height: 95%;
+  overflow-y: hidden;
+}

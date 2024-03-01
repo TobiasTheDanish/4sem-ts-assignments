@@ -1,0 +1,69 @@
+@media screen and (max-width: 760px) {
+  .task-list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.task-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 1rem;
+  border: 1px solid #E3E3E3;
+  border-radius: 8px;
+  height: 90%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.task-list::-webkit-scrollbar {
+  display: none;
+}
+
+.task-container {
+  height: 185px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr 0.5fr 1fr;
+  gap: 8px;
+  border-bottom: 1px solid #E3E3E3;
+  /* border-radius: 24px; */
+  padding: 16px;
+}
+
+.task-container.complete>h3,
+.task-container.complete>p {
+  text-decoration: line-through;
+}
+
+.task-container.complete>.task-expire {
+  visibility: hidden;
+}
+
+.task-title,
+.task-desc,
+.task-expire {
+  grid-column: 1 /span 2;
+  margin: 0;
+}
+
+.task-title {
+  border-bottom: 1px solid #E3E3E3;
+  font-size: 1.2rem;
+}
+
+.task-desc,
+.task-expire {
+  font-size: 0.9rem;
+}
+
+.btn-md {
+  padding: 0.3em 0.9em;
+  font-size: 0.7em;
+}
+
+button.danger {
+  background: #AE1010;
+}
