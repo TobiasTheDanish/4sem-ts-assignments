@@ -1,7 +1,7 @@
 import { warn } from 'console';
 import {MongoClient, ObjectId, ServerApiVersion} from 'mongodb'
 
-const uri = "mongodb+srv://tobiasthedanish:9P5RzooWkzwLuzxd@fullstack-ts.kmnlgvk.mongodb.net/"
+const uri = ""
 
 const client = new MongoClient(uri, {
     serverApi: {
