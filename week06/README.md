@@ -2,9 +2,7 @@
 
 ## Overview
 
-- Your name
-- which assignment are included
-- which one are completed and which one are not
-
-## Friday presentation
-- add the friday presentation into the weekly folder
+- Tobias Horne Christiansen
+- React hooks assignment
+- A simple counter app with the use of the 'useReducer' hook, combined with a custom 'useAuth' hook, to allow for loggin in and out.
+- Example users can be found [here](./react-hooks/src/AuthHook.ts).
